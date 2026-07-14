@@ -1,0 +1,520 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+:root {
+    --cor-azulmar: #0B132B; 
+    --cor-azulesc: #1C2541; 
+    --cor-amarela: #FFC300;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: var(--cor-azulmar);
+    color:white;
+    
+}
+html {
+    scroll-behavior: smooth;
+}
+/*Header*/
+header {
+    background-color: var(--cor-azulesc);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+}
+
+.titulo {
+    font-size:1.7rem;
+    font-weight: bold;
+    color:white;
+}
+
+.links-nav{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.links-nav a {
+    text-decoration: none;
+    color:white;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.links-nav a:hover {
+    text-decoration: none;
+    color:var(--cor-amarela);
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.nav-toggle-checkbox {
+    display: none;
+}
+ 
+.nav-toggle-label,
+.nav-close {
+    display: none;
+}
+ 
+.nav-toggle-label {
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+ 
+.barra-hamburguer {
+    display: block;
+    width: 26px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Quem Sou */
+.quemsou {
+    display: flex;
+    flex-direction: row;
+    justify-content:right;
+    align-items: center;
+    gap: 120px;
+    padding: 3rem 20%;
+}
+
+.foto-perfil {
+    width: 247px;
+    height: 247px;
+    object-fit: cover;
+    border-radius: 50%; 
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.texto-quemsou h2 {
+    margin-bottom: 1rem;
+    font-weight:700;
+    font-size: 1.4rem;
+}
+.texto-quemsou p{
+    width:90%;
+    font-size:16px;
+    font-weight: 400;
+}
+
+
+/*Hobbies e Top*/
+.texto-centralizado-hobbies{
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    display:flex;
+    justify-content:flex-end;
+    padding-right:60px;
+}
+.texto-centralizado-top{
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    display:flex;
+    justify-content:flex-start;
+    padding-left:60px;
+}
+.hobbies-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+    border-bottom: 1px solid #0e0101;
+    padding: 3rem 5%;
+    border-top: 1px solid black; 
+}
+
+.coluna-hobbies {
+    flex: 1;
+}
+
+.coluna-hobbies h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.caixa-cartoes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.cartao {
+    background-color:#e6e6e6 ; 
+    width: 110px; 
+    border-radius:8px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 8px; 
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.cartao:hover {
+    transform: translateY(-8px);
+}
+.foto-cartao img {
+    width: 100%; 
+    height: 90px;
+    object-fit:cover;
+    background-color:#cccccc;
+    border-radius:6px; 
+}
+
+.titulo-cartao {
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center; 
+    line-height: 1.3;
+    color: #111;
+}
+
+.selo {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    background-color: var(--cor-amarela); 
+    color: black; 
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Projetos*/
+.projeto {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    border-top: 1px solid black; 
+    border-bottom: 1px solid black;
+    padding: 3rem 5%;
+}
+
+.midia-projeto {
+    flex: 1;
+}
+
+.espaco-imagem-projeto {
+    width: 100%;
+    max-width: 400px;
+    height: 250px;
+    background-color: #cccccc; 
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    object-fit: cover;
+}
+
+.detalhes-projeto {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.projeto-titulo{
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-bottom: 10px;
+}
+.projeto-subtitulo{
+    text-decoration:underline;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin-bottom: 10px;
+}
+
+
+/*  Contato */
+.contato {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 3rem 5%;
+}
+
+.texto-contato, .formulario-contato {
+    flex: 1;
+}
+
+.texto-contato h2 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size:1.9rem;
+    line-height: 100%;
+}
+ .texto-contato p {
+    width:90%;
+    font-size:16px;
+    font-weight: 400;
+    line-height: 24px;
+ }
+.grupo-formulario {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo-formulario label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.grupo-formulario input, 
+.grupo-formulario textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: white;  
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 16px; 
+    resize:none;
+}
+
+.botao-enviar {
+    background-color: var(--cor-amarela);
+    color: #111;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    float: right;
+}
+
+.botao-enviar:hover {
+    background-color: #777;
+    color: white;
+}
+
+/* Footer */
+footer{
+    background-color: black; 
+    padding: 1rem 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.icones-sociais {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.icone img{
+    width: 32px;
+    height: 32px;
+}
+
+
+.botao-rodape {
+    background-color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.botao-footer{
+    color:white;
+    text-decoration: none; 
+    text-align: center;
+    font-size: 16px;
+    border: 2px solid white;
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+}
+
+.botao-footer:hover{
+    background-color:white;
+    color:black;
+    text-decoration: none; 
+    text-align: center;
+    font-size: 16px;
+    border: 2px solid white;
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+
+ 
+/* Media Queries */
+@media (max-width: 1024px) {
+    .quemsou {
+        gap: 4rem;
+        padding: 3rem 8%;
+    }
+}
+ 
+
+@media (max-width: 767px) {
+    header {
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.25rem 6%;
+    }
+ 
+    .nav-toggle-label {
+        display: block;
+        cursor: pointer;
+        font-size: 1.6rem;
+        line-height: 1;
+        color: white;
+    }
+ 
+    .links-nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 180px;
+        background-color: var(--cor-azulesc);
+        box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.4);
+        border-radius: 0 0 0 8px;
+        padding: 1.5rem;
+        z-index: 999;
+    }
+ 
+    .nav-toggle-checkbox:checked ~ .links-nav {
+        display: flex;
+    }
+ 
+    .nav-toggle-checkbox:checked ~ .nav-toggle-label {
+        display: none;
+    }
+ 
+    .nav-close {
+        display: block;
+        align-self: flex-end;
+        cursor: pointer;
+        font-size: 1.5rem;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+        color: white;
+    }
+ 
+    .quemsou {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 2rem;
+        padding: 3rem 6%;
+    }
+ 
+    .foto-perfil {
+        width: min(247px, 60vw);
+        height: min(247px, 60vw);
+    }
+ 
+    .texto-quemsou {
+        text-align: left;
+    }
+ 
+    .texto-quemsou p {
+        width: 100%;
+    }
+ 
+    .texto-centralizado-hobbies,
+    .texto-centralizado-top {
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+    }
+ 
+    .hobbies-top {
+        flex-direction: column;
+        padding: 3rem 5%;
+    }
+ 
+    .caixa-cartoes {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+        gap: 10px;
+    }
+ 
+    .cartao {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        text-align: left;
+    }
+ 
+    .cartao:hover {
+        transform: none;
+    }
+ 
+    .foto-cartao {
+        flex-shrink: 0;
+        width: 64px;
+    }
+ 
+    .foto-cartao img {
+        width: 64px;
+        height: 64px;
+    }
+ 
+    .titulo-cartao {
+        text-align: left;
+        flex: 1;
+    }
+ 
+    .selo {
+        top: 6px;
+        left: 6px;
+    }
+ 
+    .projeto {
+        flex-direction: column;
+    }
+ 
+    .contato {
+        flex-direction: column;
+    }
+ 
+    .texto-contato p {
+        width: 100%;
+    }
+ 
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        padding: 1.5rem 6%;
+    }
+}
